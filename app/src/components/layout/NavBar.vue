@@ -3,10 +3,8 @@
         <div :class="'container'">
             
             <div :class="'nav-bar-container-content'">
-                <div 
-                    :class="'nav-item-1'">
-                    <img :src="require('@/assets/icon/menu.png')" :height="25"/>
-                </div>
+
+                <NavBarMenu :class="'nav-item-1'"/>
                 
                 
                 <div :class="'nav-item-2'"><a :href="'#Home'"><span>Antonio J Parody Guzmán</span></a></div>
@@ -30,8 +28,13 @@
 </template>
 
 <script>
+import NavBarMenu from '../section/NavBar/NavBarMenu'
+
 export default {
     name: 'NavBar',
+    components: {
+        NavBarMenu
+    },
     data () {
         return {
             menu: ['Home', 'Skills', 'Experience', 'Contact', 'Resume'],

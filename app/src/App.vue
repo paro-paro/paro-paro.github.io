@@ -127,6 +127,10 @@ export default {
        color: #212529 !important;
     }
 
+    .popper__arrow {
+        display: none !important;
+    }
+
     /* utility classes (global) */
 
     .m-0 {
