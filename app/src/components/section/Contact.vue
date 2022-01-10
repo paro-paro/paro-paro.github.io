@@ -15,7 +15,7 @@
                             :rules="rules"
                             :hide-required-asterisk="true"
                             :show-message="true"
-                            :label-position="'left'"
+                            :label-position="label_position"
                             :label-width="'auto'"
                             :action="'https://formsubmit.co/6e2d41bf1e229914a814d7d8b06870da'"
                             :method="'POST'"
@@ -113,7 +113,8 @@ export default {
                         trigger: 'change'
                     }
                 ]
-            }
+            },
+            label_position: screen.width < 992 ? 'top' : 'left'
         }
     },
     methods: {
@@ -133,6 +134,7 @@ export default {
         display: flex; justify-content: center;
         background: #eaf2fa;
     }
+
     .row {
         display: flex; flex-wrap: wrap;
     }
@@ -148,7 +150,7 @@ export default {
             max-width: 25%;
         }
     }
-    
+
     @media only screen and (min-width: 992px) {
         .col-lg-8 {
             flex: 0 0 65%;
@@ -157,47 +159,58 @@ export default {
     }
     
 
-    /deep/ .el-form-item {
-        margin-bottom: 40px;
+    @media only screen and (min-width: 992px) {
+        /deep/ .el-form-item {
+            margin-bottom: 40px;
+        }
     }
+
     /deep/ .el-input__inner {
         height: 40px;
     }
+
     /deep/ .el-textarea__inner {
         min-height: 150px !important;
         font-family: inherit;
     }
+
     /deep/ .el-input__inner:focus {
         /*border: 0 !important;*/
         border-color: #795548 !important;
         /*box-shadow: 0 0 0 0.2rem #996b5b;*/
     }
+
     /deep/ .el-textarea__inner:focus {
         /*border: 0 !important;*/
         border-color: #795548 !important;
         /*box-shadow: 0 0 0 0.2rem #996b5b;*/
     }
+
     /deep/ .el-form-item__error {
         padding-top: 8px;
         font-family: roboto, sans-serif;
     }
+
     /deep/ .el-form-item.is-error .el-input__inner {
         border-color: #795548 !important;
     }
+
     /deep/ .el-form-item.is-error .el-textarea__inner {
         border-color: #795548 !important;
     }
-    
+
     .button {
         color: #795548;
         border-color: #795548;
         background: transparent;
     }
+
     .button:hover {
         color: white;
         border-color: #795548;
         background: #795548;
     }
+
     .button:focus {
         color: white;
         border-color: #795548;
