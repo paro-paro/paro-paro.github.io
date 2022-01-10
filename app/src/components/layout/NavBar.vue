@@ -1,9 +1,17 @@
 <template>
     <nav :class="'nav-bar'">
         <div :class="'container'">
+            
             <div :class="'nav-bar-container-content'">
-                <div :class="'nav-item-1'"><a :href="'#Home'"><span>Antonio J Parody Guzmán</span></a></div>
-                <div :class="'nav-item-2'">
+                <div 
+                    :class="'nav-item-1'">
+                    <img :src="require('@/assets/icon/menu.png')" :height="25"/>
+                </div>
+                
+                
+                <div :class="'nav-item-2'"><a :href="'#Home'"><span>Antonio J Parody Guzmán</span></a></div>
+                
+                <div :class="'nav-item-3'">
                     <ul>
                         <li 
                             v-for="value, idx in menu"
@@ -15,7 +23,7 @@
                         </li>
                     </ul>
                 </div>
-                <!-- <div :class="'nav-item-3'"><img :src="require('@/assets/icon/moon-2.png')" :height="25"/></div> -->
+                <!-- <div :class="'nav-item-4'"><img :src="require('@/assets/icon/moon-2.png')" :height="25"/></div> -->
             </div>
         </div>
     </nav>
@@ -65,15 +73,35 @@ export default {
     }
     
     .nav-bar-container-content {
-        display: flex; justify-content: flex-end; align-items: center; gap: 20px;
+        display: flex; justify-content: flex-end; align-items: center;
     }
-    .nav-item-1 {
+    
+    .nav-item-2 {
         margin-right: auto;
         font-size: 20px;
         font-weight: 600;
         cursor: pointer;
     }
+    
     .nav-item-3 {
         cursor: pointer;
     }
+
+    @media only screen and (min-width: 768px) {
+        .nav-item-1 {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .nav-item-2 {
+            margin-left: auto;
+        }
+
+        .nav-item-3 {
+            display: none;
+        }
+    }
+
+    
 </style>
