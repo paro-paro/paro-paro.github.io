@@ -2,14 +2,11 @@
     <nav :class="'nav-bar'">
         <div :class="'container'">
             
-            <div :class="'nav-bar-container-content'">
-
-                <NavBarMenu :class="'nav-item-1'"/>
+            <div :class="'nav-bar-container-content'">                
                 
+                <div :class="'nav-item-1'"><a :href="'#Home'"><span>Antonio J Parody Guzmán</span></a></div>
                 
-                <div :class="'nav-item-2'"><a :href="'#Home'"><span>Antonio J Parody Guzmán</span></a></div>
-                
-                <div :class="'nav-item-3'">
+                <div :class="'nav-item-2'">
                     <ul>
                         <li 
                             v-for="value, idx in menu"
@@ -21,6 +18,8 @@
                         </li>
                     </ul>
                 </div>
+
+                <NavBarMenu :class="'nav-item-3'"/>
                 <!-- <div :class="'nav-item-4'"><img :src="require('@/assets/icon/moon-2.png')" :height="25"/></div> -->
             </div>
         </div>
@@ -49,19 +48,19 @@ export default {
         color: inherit;
         text-decoration: none;
     } 
-    
+
     ul {
         list-style: none;
         display: flex;
         gap: 15px;
     }
-    
+
     li {
         font-size: 14px;
         font-weight: 600;
         cursor: pointer;
     }
-    
+
     .nav-bar {
         z-index: 1030;
         height: 70px;
@@ -74,37 +73,27 @@ export default {
         
         display: flex; justify-content: center; align-items: center;
     }
-    
+
     .nav-bar-container-content {
         display: flex; justify-content: flex-end; align-items: center;
     }
-    
-    .nav-item-2 {
+
+    .nav-item-1 {
         margin-right: auto;
         font-size: 20px;
         font-weight: 600;
         cursor: pointer;
     }
-    
-    /*.nav-item-3 {
-        cursor: pointer;
-    }*/
 
-    @media only screen and (min-width: 768px) {
-        .nav-item-1 {
+    @media only screen and (max-width: 768px) {
+        .nav-item-2 {
             display: none;
         }
     }
 
-    @media only screen and (max-width: 768px) {
-        .nav-item-2 {
-            margin-left: auto;
-        }
-
+    @media only screen and (min-width: 768px) {
         .nav-item-3 {
             display: none;
         }
     }
-
-    
 </style>

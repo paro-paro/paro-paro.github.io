@@ -2,7 +2,7 @@
     <div>
         <el-dropdown 
                     :trigger="'click'"
-                    :placement="'bottom-start'">
+                    :placement="'bottom-end'">
             
             <span><img :src="require('@/assets/icon/menu.png')" :height="25" style="cursor: pointer"/></span>
             
