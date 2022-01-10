@@ -11,7 +11,7 @@
         <p>This experience, along with a very strong determination to become a software developer, allowed me to co-found <a style="color: #795548" :class="'link'" :href="'https://pod.coop/'" :target="'_blank'" >Plant On Demand</a>, the first online sales and management platform for the short food supply chain.</p>
 
         <div :class="'row'">
-            <div :class="'col-3'">
+            <div :class="'col-12 col-md-1'">
                 <h2>Interests</h2>
                 <ul>
                     <li>Data driven web applications</li>
@@ -20,7 +20,7 @@
                     <li>History, football and music</li>
                 </ul>
             </div>
-            <div :class="'col-4'">
+            <div :class="'col-12 col-md-2'">
                 <h2>Education</h2>
                 <ul>
                     <li>Master in Electrical Engineering</li>
@@ -44,14 +44,22 @@ export default {
         padding: .3rem;
         font-size: 17px;
     }
+
     .row {
-        display: flex;
-        flex-wrap: wrap;
+        display: flex; flex-wrap: wrap;
     }
-    .col-3 {
-        flex: 38;
+
+    @media only screen and (min-width: 768px) {
+        .col-md-1 {
+            flex: 0 0 38%;
+            max-width: 38%
+        }
     }
-    .col-4 {
-        flex: 62;
+
+    @media only screen and (min-width: 768px) {
+        .col-md-2 {
+            flex: 0 0 62%;
+            max-width: 62%;
+        }
     }
 </style>

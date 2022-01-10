@@ -56,33 +56,33 @@ export default {
         width: 100%;
         margin-right: auto;
         margin-left: auto;
-        background: red;
+        /*background: red;*/
     }
 
     @media only screen and (min-width: 576px) { /* 576px <= screen size < 768px */
         .container {
-            background: blue;
+            /*background: blue;*/
             max-width: 540px;
         }
     }
 
     @media only screen and (min-width: 768px) { /* 768px <= screen size < 992px */
         .container {
-            background: yellow;
+            /*background: yellow;*/
             max-width: 720px;
         }
     }
 
     @media only screen and (min-width: 992px) { /* 992px <= screen size < 1200px */
         .container {
-            background: green;
+            /*background: green;*/
             max-width: 960px;
         }
     }
 
     @media only screen and (min-width: 1200px) { /* screen size >= 1200px */
         .container {
-            background: purple;
+            /*background: purple;*/
             max-width: 1200px;
         }
     }
