@@ -2,11 +2,12 @@
     <section id="Contact" :class="'section'">
         <div :class="'container'">
             <div :class="'row'">
-                <div :class="'col-1'">
+                
+                <div :class="'col-12 col-lg-4'">
                     <h1 style="margin: 0; font-size: 30px; font-weight: 400;">Contact</h1>
                 </div>
 
-                <div :class="'col-2'">
+                <div :class="'col-12 col-lg-8'">
                     <el-form
                             id="Form"
                             ref="Form"
@@ -133,15 +134,29 @@ export default {
         background: #eaf2fa;
     }
     .row {
-        display: flex;
+        display: flex; flex-wrap: wrap;
     }
-    .col-1 {
-        flex: 0 0 25%;
-        justify-content: center;
+
+    .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
-    .col-2 {
-        flex: 1 0 65%;
+
+    @media only screen and (min-width: 992px) {
+        .col-lg-4 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
     }
+    
+    @media only screen and (min-width: 992px) {
+        .col-lg-8 {
+            flex: 0 0 65%;
+            max-width: 65%;
+        }
+    }
+    
+
     /deep/ .el-form-item {
         margin-bottom: 40px;
     }
@@ -172,6 +187,7 @@ export default {
     /deep/ .el-form-item.is-error .el-textarea__inner {
         border-color: #795548 !important;
     }
+    
     .button {
         color: #795548;
         border-color: #795548;

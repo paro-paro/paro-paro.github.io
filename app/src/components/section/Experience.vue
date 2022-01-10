@@ -1,13 +1,13 @@
 <template>
     <section id="Experience" :class="'section'">
         <div :class="'container'">
-
             <div :class="'row'">
-                <div :class="'col-1'">
+                
+                <div :class="'col-12 col-lg-4'">
                     <h1 style="margin: 0; font-size: 30px; font-weight: 400;">Experience</h1>
                 </div>
 
-                <div :class="'col-2'">
+                <div :class="'col-12 col-lg-8'">
                     <vue-timeline-update
                                     :theme="'light'"
                                     :icon="'code'"
@@ -140,34 +140,49 @@ export default {
 </script>
 
 <style scoped>
-    p {
-        font-size: 15px;
-    }
-    li {
-        font-size: 15px;
-    }
     .section {
         padding: 140px 2rem 110px 2rem;
         display: flex; justify-content: center; align-items: center;
     }
+    
     .row {
-        display: flex;
+        display: flex; flex-wrap: wrap;
     }
-    .col-1 {
-        flex: 0 0 25%;
-        justify-content: center;
+
+    .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
-    .col-2 {
-        flex: 0 0 65%;
+
+    @media only screen and (min-width: 992px) {
+        .col-lg-4 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
     }
+    
+    @media only screen and (min-width: 992px) {
+        .col-lg-8 {
+            flex: 0 0 65%;
+            max-width: 65%;
+        }
+    }
+    
     .link {
         text-decoration: none;
         color: #795548;
     }
+    
     .link:hover {
         text-decoration: underline;
     }
+    
+    p {
+        font-size: 15px;
+    }
+    
     li {
+        font-size: 15px;
         padding-bottom: 1rem;
     }
 </style>
