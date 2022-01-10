@@ -114,7 +114,15 @@ export default {
                     }
                 ]
             },
-            label_position: screen.width < 992 ? 'top' : 'left'
+            screen_width: window.innerWidth > 0 ? window.innerWidth : screen.width // https://stackoverflow.com/questions/6850164/get-the-device-width-in-javascript
+        }
+    },
+    mounted () {
+        window.addEventListener('resize', () => this.screen_width = window.innerWidth > 0 ? window.innerWidth : screen.width)
+    },
+    computed: {
+        label_position () {
+            return this.screen_width < 992 ? 'top' : 'left'
         }
     },
     methods: {
