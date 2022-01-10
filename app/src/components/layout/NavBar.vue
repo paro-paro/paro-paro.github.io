@@ -83,9 +83,9 @@ export default {
         cursor: pointer;
     }
     
-    .nav-item-3 {
+    /*.nav-item-3 {
         cursor: pointer;
-    }
+    }*/
 
     @media only screen and (min-width: 768px) {
         .nav-item-1 {
