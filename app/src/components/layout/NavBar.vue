@@ -4,7 +4,7 @@
             
             <div :class="'nav-bar-container-content'">                
                 
-                <div :class="'nav-item-1'"><a :href="'#Home'"><span>Antonio J Parody Guzmán</span></a></div>
+                <div :class="'nav-item-1'"><span @click="scrollTo('Home')">Antonio J Parody Guzmán</span></div>
                 
                 <div :class="'nav-item-2'">
                     <ul>
@@ -14,13 +14,12 @@
 
                             <a v-if="value === 'Resume'" :href="require('@/assets/files/resume.pdf')"><span>{{ value }}</span></a>
 
-                            <a v-else :href="`#${value}`"><span>{{ value }}</span></a>
+                            <span v-else @click="scrollTo(value)">{{ value }}</span>
                         </li>
                     </ul>
                 </div>
 
-                <NavBarMenu :class="'nav-item-3'"/>
-                <!-- <div :class="'nav-item-4'"><img :src="require('@/assets/icon/moon-2.png')" :height="25"/></div> -->
+                <NavBarMenu :class="'nav-item-3'" @click="scrollTo"/>
             </div>
         </div>
     </nav>
@@ -36,8 +35,12 @@ export default {
     },
     data () {
         return {
-            menu: ['Home', 'Skills', 'Experience', 'Contact', 'Resume'],
-            // menu: ['Home', 'Skills', 'Experience', 'Posts', 'Projects', 'Contact', 'Resume']
+            menu: ['Home', 'Skills', 'Experience', 'Contact', 'Resume']
+        }
+    },
+    methods: {
+        scrollTo (id) {
+            document.getElementById(id).scrollIntoView()
         }
     }
 }

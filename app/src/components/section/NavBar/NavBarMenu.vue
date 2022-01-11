@@ -14,7 +14,7 @@
                         <div>
                             <a v-if="value === 'Resume'" :href="require('@/assets/files/resume.pdf')"><span>{{ value }}</span></a>
 
-                            <a v-else :href="`#${value}`"><span>{{ value }}</span></a>
+                            <span v-else @click="$emit('click', value)">{{ value }}</span>
                         </div>
                 </el-dropdown-item>
             </el-dropdown-menu>
@@ -35,7 +35,6 @@ export default {
 
 <style scoped>
     .dropdown-menu {
-        /*width: 60%;*/
         background: #f7f7f7;
     }
 </style>
