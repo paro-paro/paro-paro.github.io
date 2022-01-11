@@ -27,7 +27,7 @@
                 </li> -->
                 
                 <li>
-                    <a :href="require('@/assets/files/resume.pdf')" :target="'_blank'"><img :src="require('@/assets/icon/cv.png')" :class="'grow'" :height="32" style="cursor: pointer"/></a>
+                    <a :href="require('@/assets/files/resume.pdf')"><img :src="require('@/assets/icon/cv.png')" :class="'grow'" :height="32" style="cursor: pointer"/></a>
                 </li>
             </ul>
         </div>

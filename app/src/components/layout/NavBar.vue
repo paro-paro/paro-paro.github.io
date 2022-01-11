@@ -12,7 +12,7 @@
                             v-for="value, idx in menu"
                             :key="idx">
 
-                            <a v-if="value === 'Resume'" :href="require('@/assets/files/resume.pdf')" :target="'_blank'"><span>{{ value }}</span></a>
+                            <a v-if="value === 'Resume'" :href="require('@/assets/files/resume.pdf')"><span>{{ value }}</span></a>
 
                             <a v-else :href="`#${value}`"><span>{{ value }}</span></a>
                         </li>
