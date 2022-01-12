@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <NavBar/>
+        <Header/>
         <Home/>
         <Skills/>
         <Experience/>
@@ -10,23 +10,23 @@
 </template>
 
 <script>
-import NavBar     from '@/components/layout/NavBar'
-import Footer     from '@/components/layout/Footer'
+import Header     from '@/components/section/Header'
 import Home       from '@/components/section/Home'
 import Skills     from '@/components/section/Skills'
 import Experience from '@/components/section/Experience'
 import Contact    from '@/components/section/Contact'
+import Footer     from '@/components/section/Footer'
 
 export default {
     name: 'App',
     components: {
-        NavBar,
-        Footer,
+        Header,
         Home,
         Skills,
         Experience,
-        Contact
-    },
+        Contact,
+        Footer
+    }
 }
 
 // for light/dark mode

@@ -4,18 +4,14 @@
                     :trigger="'click'"
                     :placement="'bottom-end'">
             
-            <span><img :src="require('@/assets/icon/menu.png')" :height="25" style="cursor: pointer"/></span>
+            <span><img :src="require('@/assets/icon/menu.png')" :height="20" style="cursor: pointer"/></span>
             
             <el-dropdown-menu :slot="'dropdown'" :class="'dropdown-menu'">
                 <el-dropdown-item 
                                 v-for="value, idx in menu"
                                 :key="idx">
 
-                        <div>
-                            <a v-if="value === 'Resume'" :href="require('@/assets/files/resume.pdf')"><span>{{ value }}</span></a>
-
-                            <span v-else @click="$emit('click', value)">{{ value }}</span>
-                        </div>
+                        <MenuItem :value="value" @click="$emit('click', $event)"/>
                 </el-dropdown-item>
             </el-dropdown-menu>
         </el-dropdown>            
@@ -23,12 +19,15 @@
 </template>
 
 <script>
+import MenuItem from './MenuItem'
+
 export default {
-    name: 'NavBarMenu',
-    data () {
-        return {
-            menu: ['Home', 'Skills', 'Experience', 'Contact', 'Resume']
-        }
+    name: 'NavBarMenuDrop',
+    components: {
+        MenuItem
+    },
+    props: {
+        menu: Array
     }
 }
 </script>

@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import HomeLeft  from './Home/HomeLeft'
-import HomeRight from './Home/HomeRight'
+import HomeLeft  from './home/HomeLeft'
+import HomeRight from './home/HomeRight'
 
 export default {
     name: 'Home',
