@@ -4,7 +4,7 @@
             <div :class="'row'">
 
                 <div :class="'col-12'" style="padding-bottom: 1rem; font-size: 20px">
-                    <h1>Skills</h1>
+                    <h1 style="margin: 0">Skills</h1>
                 </div>
 
                 <div 
@@ -92,7 +92,7 @@ export default {
 
 <style scoped>
     .section {
-        padding: 110px 2rem 110px 2rem;
+        padding: 4rem 2rem 115px 2rem;
         display: flex; justify-content: center; align-items: center;
         background: #eaf2fa;
     }

@@ -141,7 +141,7 @@ export default {
 
 <style scoped>
     .section {
-        padding: 140px 2rem 110px 2rem;
+        padding: 4rem 2rem 115px 2rem;
         display: flex; justify-content: center; align-items: center;
     }
     

@@ -39,7 +39,15 @@ export default {
     },
     methods: {
         scrollTo (id) {
-            document.getElementById(id).scrollIntoView()
+            id === 'Home' ? window.scrollTo(0, 0) : this.handleScroll(id)
+        },
+        handleScroll (id) {
+            let offset = document.getElementById(id).getBoundingClientRect().top - document.body.getBoundingClientRect().top
+            window.scrollTo({
+                top: offset,
+                left: 0,
+                behavior: 'smooth'
+            })
         }
     }
 }

@@ -29,9 +29,17 @@ export default {
 
 <style scoped>
     .section {
-        padding: 140px 2rem 110px 2rem;
+        margin-top: 50px;
+        padding: 4rem 2rem 115px 2rem;
         display: flex; justify-content: center; align-items: center;
     }
+
+    @media only screen and (min-width: 992px) {
+        .section {
+            margin-top: 70px;
+        }
+    }
+
     .row {
         display: flex; flex-wrap: wrap;
     }
