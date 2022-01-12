@@ -39,15 +39,12 @@ export default {
 <style>
     body, html {
         font-family: roboto, sans-serif;
-
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-
-        scroll-behavior: smooth;
         text-rendering: optimizeLegibility;
-
+        scroll-behavior: smooth;
         margin: 0  !important;
         padding: 0 !important;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
     }
 
     /* responsive design: mobile first */ /* screen size < 576px */

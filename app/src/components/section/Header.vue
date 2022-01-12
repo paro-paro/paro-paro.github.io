@@ -9,11 +9,13 @@
                 <NavBarMenu
                             :class="'item-2'"
                             :menu="menu"
+                            @update="updateMenu"
                             @click="scrollTo"/>
 
                 <NavBarMenuDrop 
                             :class="'item-3'"
                             :menu="menu"
+                            @update="updateMenu"
                             @click="scrollTo"/>
             </div>
         </div>
@@ -34,7 +36,28 @@ export default {
     },
     data () {
         return {
-            menu: ['Home', 'Skills', 'Experience', 'Contact', 'Resume']
+            menu: [
+                {
+                    label: 'Home',
+                    is_scrolled: false
+                },
+                {
+                    label: 'Skills',
+                    is_scrolled: false
+                },
+                {
+                    label: 'Experience',
+                    is_scrolled: false
+                },
+                {
+                    label: 'Contact',
+                    is_scrolled: false
+                },
+                {
+                    label: 'Resume',
+                    is_scrolled: false
+                }
+            ]
         }
     },
     methods: {
@@ -48,6 +71,9 @@ export default {
                 left: 0,
                 behavior: 'smooth'
             })
+        },
+        updateMenu (obj) {
+            this.menu.find(item => item.label === obj.label).is_scrolled = obj.is_scrolled
         }
     }
 }

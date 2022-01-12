@@ -118,7 +118,9 @@ export default {
         }
     },
     mounted () {
-        window.addEventListener('resize', () => this.screen_width = window.innerWidth > 0 ? window.innerWidth : screen.width)
+        window.addEventListener('resize', () => {
+            this.screen_width = window.innerWidth > 0 ? window.innerWidth : screen.width  
+        })
     },
     computed: {
         label_position () {

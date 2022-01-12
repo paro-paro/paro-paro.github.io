@@ -8,7 +8,7 @@
 
         <p>This made me change the course of my career, getting my first tech related job at SuperTech, where I could learnt the basics of start-ups business models working as product manager.</p>
 
-        <p>This experience, along with a very strong determination to become a software developer, allowed me to co-found <a style="color: #795548" :class="'link'" :href="'https://pod.coop/'" :target="'_blank'" >Plant On Demand</a>, the first online sales and management platform for the short food supply chain.</p>
+        <p>This experience, along with a very strong determination to become a software developer, allowed me to co-found <a style="color: #795548; font-weight: 600" :class="'link'" :href="'https://pod.coop/'" :target="'_blank'" >Plant On Demand</a>, the first online sales and management platform for the short food supply chain.</p>
 
         <div :class="'row'">
             <div :class="'col-12 col-md-1'">
@@ -61,5 +61,9 @@ export default {
             flex: 0 0 62%;
             max-width: 62%;
         }
+    }
+
+    .link:hover {
+        text-decoration: underline;
     }
 </style>

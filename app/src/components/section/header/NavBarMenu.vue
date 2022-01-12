@@ -1,11 +1,14 @@
 <template>
     <div>
         <ul>
-            <li 
-                v-for="value, idx in menu"
-                :key="idx">
-
-                <MenuItem :value="value" @click="$emit('click', $event)"/>
+            <li v-for="value, idx in labels" :key="idx">
+                <MenuItem 
+                        :idx="idx"
+                        :value="value"
+                        :menu="menu"
+                        :is_resume="value === 'Resume'"
+                        @update="$emit('update', $event)"
+                        @click="$emit('click', $event)"/>
             </li>
         </ul>
     </div>
@@ -21,15 +24,20 @@ export default {
     },
     props: {
         menu: Array
+    },
+    computed: {
+        labels () {
+            return this.menu.map(item => item.label)
+        }
     }
 }
 </script>
 
 <style scoped>
     ul {
-        list-style: none;
         display: flex;
         gap: 15px;
+        list-style: none;
     }
 
     li {
