@@ -13,7 +13,7 @@
         </div>
 
         <div style="margin-top: 3rem">
-            <ul style="display: flex; list-style: none; justify-content: center; align-items: center; margin: 0; padding: 0; gap: 5px">
+            <ul style="display: flex; list-style: none; justify-content: center; align-items: center; margin: 0; padding: 0; gap: .7rem">
                 
                 <li><a :href="'https://www.linkedin.com/in/aparody/'" :target="'_blank'"><img :class="'grow'" :src="require('@/assets/icon/linkedin.png')" :height="32"/></a></li>
                 <li><a :href="'https://github.com/paro-paro'"         :target="'_blank'"><img :class="'grow'" :src="require('@/assets/icon/github.png')"/></a></li>
