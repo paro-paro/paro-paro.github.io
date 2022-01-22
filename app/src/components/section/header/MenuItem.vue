@@ -25,7 +25,11 @@ export default {
         }
     },
     mounted () {
-        this.initData()
+        // contact section offset is not properly calculated if initData is triggered directly...
+        // what I do not understand is why this.$nextTick(() => { this.initData() }) is not working...
+        setTimeout(() => {
+            this.initData()
+        }, 320)
         
         window.addEventListener('resize', () => {
             this.initData()
