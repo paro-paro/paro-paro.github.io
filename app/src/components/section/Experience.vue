@@ -81,7 +81,7 @@
 
                                             <p>In my first role I was responsible for delivery operations and customer support, supervising a team of 10 to 12 logistics employees.</p>
                                             
-                                            <p>After joining the product development team I contributed to the design and validation of the followings tools:</p>
+                                            <p>After joining the product development team I contributed to the design and validation of the followings apps:</p>
 
                                             <ul>
                                                 <li>Desktop order management dashboard</li>
