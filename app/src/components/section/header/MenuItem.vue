@@ -29,7 +29,7 @@ export default {
         // what I do not understand is why this.$nextTick(() => { this.initData() }) is not working...
         setTimeout(() => {
             this.initData()
-        }, 320)
+        }, 500)
         
         window.addEventListener('resize', () => {
             this.initData()
