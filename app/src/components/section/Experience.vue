@@ -13,7 +13,7 @@
                                     :icon="'code'"
                                     :color="'black'"
                                     :animation="false"
-                                    :dateString="'2019 - Today'"
+                                    :dateString="'2018 - Today'"
                                     :date="new Date('01-01-2000')"
                                     :category="'success'"
                                     :title="'software developer - http 200'"
@@ -56,7 +56,7 @@
                         </template>
                     </vue-timeline-update>
 
-                    <vue-timeline-update
+                    <!-- <vue-timeline-update
                                     :theme="'light'"
                                     :icon="'code'"
                                     :color="'black'"
@@ -92,9 +92,9 @@
                                     </el-collapse>
                                 </div>
                             </template>
-                    </vue-timeline-update>
+                    </vue-timeline-update> -->
 
-                    <vue-timeline-update
+                    <!-- <vue-timeline-update
                                     :theme="'light'"
                                     :icon="'code'"
                                     :color="'black'"
@@ -116,17 +116,9 @@
                                             <a :href="'https://www.redexisgas.es/'" :target="'_blank'" :class="'link'">Redexis Gas</a></span>
                                         </li>
                                     </ul>
-
-                                    <!-- <el-collapse>
-                                        <el-collapse-item 
-                                                    :title="'Check experience'">
-                                            
-                                            <p>At least... they paid the bills!</p>
-                                        </el-collapse-item>
-                                    </el-collapse> -->
                                 </div>
                             </template>
-                    </vue-timeline-update>
+                    </vue-timeline-update> -->
                 </div>
             </div>
         </div>
