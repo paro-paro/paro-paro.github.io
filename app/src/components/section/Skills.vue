@@ -20,7 +20,7 @@
                     
                     <img :src="require('@/assets/icon/vuejs.png')" :height="45"/>
                     <h3>Frontend</h3>
-                    <p>HTML, CSS, JavaScript, Vue.js, Nuxt</p>
+                    <p>HTML, CSS, SCSS, JavaScript, Vue.js, Nuxt</p>
                 </div>
 
                 <div 
@@ -60,7 +60,7 @@
                     
                     <img :src="require('@/assets/icon/git.png')" :height="45"/>
                     <h3>Tech Tools</h3>
-                    <p>git, serverless framework, jupyter notebook</p>
+                    <p>git, serverless framework, jupyter notebook, unit testing</p>
                 </div>
 
                 <div 
