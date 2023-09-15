@@ -3,7 +3,7 @@
     <Header />
     <Home />
     <Skills />
-    <!-- <Experience /> -->
+    <Experience />
     <Contact />
     <Footer />
   </div>
@@ -13,7 +13,7 @@
 import Header from '@/components/section/Header'
 import Home from '@/components/section/Home'
 import Skills from '@/components/section/Skills'
-// import Experience from '@/components/section/Experience'
+import Experience from '@/components/section/Experience'
 import Contact from '@/components/section/Contact'
 import Footer from '@/components/section/Footer'
 
@@ -23,7 +23,7 @@ export default {
     Header,
     Home,
     Skills,
-    // Experience,
+    Experience,
     Contact,
     Footer
   }
