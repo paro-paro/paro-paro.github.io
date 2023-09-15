@@ -1,62 +1,88 @@
 <template>
-    <section id="Experience" :class="'section'">
-        <div :class="'container'">
-            <div :class="'row'">
-                
-                <div :class="'col-12 col-lg-4'">
-                    <h1 style="margin: 0; font-size: 30px; font-weight: 400;">Experience</h1>
-                </div>
+  <section id="Experience" :class="'section'">
+    <div :class="'container'">
+      <div :class="'row'">
+        <div :class="'col-12 col-lg-4'">
+          <h1 style="margin: 0; font-size: 30px; font-weight: 400;">Experience</h1>
+        </div>
 
-                <div :class="'col-12 col-lg-8'">
-                    <vue-timeline-update
-                                    :theme="'light'"
-                                    :icon="'code'"
-                                    :color="'black'"
-                                    :animation="false"
-                                    :dateString="'2018 - Today'"
-                                    :date="new Date('01-01-2000')"
-                                    :category="'success'"
-                                    :title="'software developer - http 200'"
-                                    :thumbnail="require('@/assets/img/alhambra.jpg')">
-                            
-                        <template>
-                            <div style="color: black;">
-                                <ul>
-                                    <li><span><b>Co-Founder | Full Stack Developer at <a :href="'https://pod.coop/'" :target="'_blank'" :class="'link'">Plant On Demand</a></b></span></li>
-                                </ul>
+        <div :class="'col-12 col-lg-8'">
+          <vue-timeline-update
+            :theme="'light'"
+            :icon="'code'"
+            :color="'black'"
+            :animation="false"
+            :dateString="'2018 - Today'"
+            :date="new Date('01-01-2000')"
+            :category="'success'"
+            :title="'software developer - http 200'"
+            :thumbnail="require('@/assets/img/alhambra.jpg')"
+          >
+            <template>
+              <div style="color: black;">
+                <ul>
+                  <li>
+                    <span
+                      ><b
+                        >Co-Founder | Full Stack Developer at
+                        <a :href="'https://pod.coop/'" :target="'_blank'" :class="'link'"
+                          >Plant On Demand</a
+                        ></b
+                      ></span
+                    >
+                  </li>
+                </ul>
 
-                                <p>As full stack developer I am part of the team in charge of the design and development of our core product: <a :href="'https://app.pod.coop/'" :target="'_blank'" :class="'link'">app.pod.coop</a></p>
+                <p>
+                  As full stack developer I am part of the team in charge of the design and development of our
+                  core product.
+                </p>
 
-                                <el-collapse :accordion="false">
-                                    <el-collapse-item
-                                                    :title="'What is Plant On Demand?'">
-                                        
-                                        <p>Plant on Demand is a food-tech Software as a Service (SaaS) cloud platform that allows on-demand production of organic food.</p>
-                                        <p>The platform provides a specific Cloud solution to help the digitalization of local producers, generating standardized data of their daily operations and enabling lightning-fast transactions with their clients. Simultaneously, it efficiently connects them to the whole food supply chain creating a solid, reliable network of local producers for retailers and end consumers to connect to.</p>
-                                        
-                                        <p>Tech stack:</p>
+                <el-collapse :accordion="false">
+                  <el-collapse-item :title="'What is Plant On Demand?'">
+                    <p>
+                      Plant on Demand is a food-tech Software as a Service (SaaS) cloud platform that allows
+                      on-demand production of organic food.
+                    </p>
+                    <p>
+                      The platform provides a specific Cloud solution to help the digitalization of local
+                      producers, generating standardized data of their daily operations and enabling
+                      lightning-fast transactions with their clients. Simultaneously, it efficiently connects
+                      them to the whole food supply chain creating a solid, reliable network of local
+                      producers for retailers and end consumers to connect to.
+                    </p>
 
-                                        <ul>
-                                            <li>AWS Cloud Architecture</li>
-                                            <li>SPA Frontend in Javascript (Vue.js)</li>
-                                            <li>Backend API in Python (Flask)</li>
-                                            <li>Relational Database in MySQL</li>
-                                            <li>DevOps CI/CD pipelines with Gitlab</li>
-                                        </ul>
-                                    </el-collapse-item>
-                                    
-                                    <el-collapse-item 
-                                                    :title="'See the future'">
-                                        
-                                        <p>Applying Artificial Intelligence (AI) techniques to the daily data generated by the platform and other external data sources, we will train models to predict supply and demand of local products, paving the way to proactively plant based on predicted demand on a sustainable way.</p>
-                                        <p>In addition, by re-training our AI models based on new data and learning from errors, our platform’s neural and deep networks will keep improving over time, providing a sustainable food production model that ensures a future with quality ecological food from local producers whilst minimizing food waste and soil degradation.</p>
-                                    </el-collapse-item>
-                                </el-collapse>
-                            </div>
-                        </template>
-                    </vue-timeline-update>
+                    <p>Tech stack:</p>
 
-                    <!-- <vue-timeline-update
+                    <ul>
+                      <li>AWS Cloud Architecture</li>
+                      <li>SPA Frontend in Javascript (Vue.js)</li>
+                      <li>Backend API in Python (Flask)</li>
+                      <li>Relational Database in MySQL</li>
+                      <li>DevOps CI/CD pipelines with Gitlab</li>
+                    </ul>
+                  </el-collapse-item>
+
+                  <el-collapse-item :title="'See the future'">
+                    <p>
+                      Applying Artificial Intelligence (AI) techniques to the daily data generated by the
+                      platform and other external data sources, we will train models to predict supply and
+                      demand of local products, paving the way to proactively plant based on predicted demand
+                      on a sustainable way.
+                    </p>
+                    <p>
+                      In addition, by re-training our AI models based on new data and learning from errors,
+                      our platform’s neural and deep networks will keep improving over time, providing a
+                      sustainable food production model that ensures a future with quality ecological food
+                      from local producers whilst minimizing food waste and soil degradation.
+                    </p>
+                  </el-collapse-item>
+                </el-collapse>
+              </div>
+            </template>
+          </vue-timeline-update>
+
+          <!-- <vue-timeline-update
                                     :theme="'light'"
                                     :icon="'code'"
                                     :color="'black'"
@@ -94,7 +120,7 @@
                             </template>
                     </vue-timeline-update> -->
 
-                    <!-- <vue-timeline-update
+          <!-- <vue-timeline-update
                                     :theme="'light'"
                                     :icon="'code'"
                                     :color="'black'"
@@ -119,62 +145,65 @@
                                 </div>
                             </template>
                     </vue-timeline-update> -->
-                </div>
-            </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-    name: 'Experience'
+  name: 'Experience'
 }
 </script>
 
 <style scoped>
-    .section {
-        padding: 4rem 2rem 115px 2rem;
-        display: flex; justify-content: center; align-items: center;
-    }
-    
-    .row {
-        display: flex; flex-wrap: wrap;
-    }
+.section {
+  padding: 4rem 2rem 115px 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .col-12 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-    @media only screen and (min-width: 992px) {
-        .col-lg-4 {
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-    }
-    
-    @media only screen and (min-width: 992px) {
-        .col-lg-8 {
-            flex: 0 0 65%;
-            max-width: 65%;
-        }
-    }
-    
-    .link {
-        text-decoration: none;
-        color: #795548;
-    }
-    
-    .link:hover {
-        text-decoration: underline;
-    }
-    
-    p {
-        font-size: 15px;
-    }
-    
-    li {
-        font-size: 15px;
-        padding-bottom: 1rem;
-    }
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .col-lg-4 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .col-lg-8 {
+    flex: 0 0 65%;
+    max-width: 65%;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: #795548;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+p {
+  font-size: 15px;
+}
+
+li {
+  font-size: 15px;
+  padding-bottom: 1rem;
+}
 </style>
