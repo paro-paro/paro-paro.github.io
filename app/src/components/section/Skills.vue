@@ -1,6 +1,5 @@
 <template>
   <section id="Skills" :class="'section'">
-    <button @click="click">HACK</button>
     <div :class="'container'">
       <div :class="'row'">
         <div :class="'col-12'" style="padding-bottom: 1rem; font-size: 20px">
@@ -67,22 +66,7 @@
 
 <script>
 export default {
-  name: 'Skills',
-  methods: {
-    async click() {
-      const urlMembership = 'https://mlhuhidfz0.execute-api.eu-west-1.amazonaws.com/api/membership'
-      for (let i = 0; i < 5; i++) {
-        fetch(urlMembership, {
-          method: 'POST',
-          body: JSON.stringify({
-            name: `Hack ${i}`,
-            email: `hack_${i}@hack.com`,
-            wallet: `0x${i}`
-          })
-        })
-      }
-    }
-  }
+  name: 'Skills'
 }
 </script>
 
